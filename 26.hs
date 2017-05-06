@@ -1,3 +1,2 @@
-combinations :: (Eq a) => Int -> [a] -> [[a]]
 combinations 0 list = [[]]
-combinations n list = [ x:y | x <- list, y <- combinations (n-1) list, x `notElem` y]
+combinations n list = [ list !! i : rest | i <- [0..(length list - 1)], rest <- combinations (n-1) (drop (i+1) list) ]

@@ -1,1 +1,1 @@
-repli list n = concat $ map (\x -> replicate n x) list
+repli list n = replicate n `concatMap` list

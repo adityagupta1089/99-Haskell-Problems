@@ -1,1 +1,1 @@
-dupli = concat . map (\x->[x,x])
+dupli = concatMap (\x -> [x, x])

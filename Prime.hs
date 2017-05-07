@@ -6,7 +6,7 @@ isPrime :: Int -> Bool
 isPrime 2 = True
 isPrime n
     | n `mod` 2 == 0 = False
-    | otherwise = not . any ((==0) . div n) $ takeWhile ((<=n) . (^2)) [3, 5..]
+    | otherwise = not . any ((==0) . mod n) $ takeWhile ((<=n) . (^2)) [3, 5..]
 
 primeFactors :: Int -> [Int]
 primeFactors n =
